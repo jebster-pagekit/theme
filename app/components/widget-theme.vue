@@ -1,0 +1,45 @@
+<template>
+
+    <div class="uk-form-horizontal">
+
+        <div class="uk-form-row">
+            <span class="uk-form-label">{{ 'Title' | trans }}</span>
+            <div class="uk-form-controls uk-form-controls-text">
+                <label><input type="checkbox" v-model="widget.theme.title_hide"> {{ 'Hide Title' | trans }}</label>
+            </div>
+        </div>
+
+        <div class="uk-form-row">
+            <label for="form-theme-title-size" class="uk-form-label">{{ 'Title Size' | trans }}</label>
+            <div class="uk-form-controls">
+                <select id="form-theme-title-size" class="uk-form-width-large" v-model="widget.theme.title_size">
+                    <option value="uk-panel-title">{{ 'Default' | trans }}</option>
+                    <option value="uk-h1 uk-margin-top-remove">{{ 'H1' | trans }}</option>
+                    <option value="uk-h2 uk-margin-top-remove">{{ 'H2' | trans }}</option>
+                    <option value="uk-h3 uk-margin-top-remove">{{ 'H3' | trans }}</option>
+                    <option value="uk-h4 uk-margin-top-remove">{{ 'H4' | trans }}</option>
+                    <option value="uk-heading-large uk-margin-top-remove">Extra Large</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+</template>
+
+<script>
+
+    module.exports = {
+
+        section: {
+            label: 'Theme',
+            priority: 90
+        },
+
+        props: ['widget', 'config']
+
+    };
+
+    window.Widgets.components['theme'] = module.exports;
+
+</script>

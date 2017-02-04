@@ -1,0 +1,17 @@
+<?php return array (
+  'Title Size' => '',
+  'Default' => '',
+  'Theme' => '',
+  'H3' => '',
+  'H1' => '',
+  'H2' => '',
+  'Website title' => '',
+  'Address' => '',
+  'Phone' => '',
+  'Logo Footer' => '',
+  'Select an optional logo to show in the footer.' => '',
+  'Save' => '',
+  'H4' => '',
+  'Title' => '',
+  'Hide Title' => '',
+);

@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pagekit 1.0.11 (jebster/theme, messages)\n"
+"POT-Creation-Date: 2017-01-28 14:35+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Title"
+msgstr ""
+
+msgid "Theme"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Website title"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Phone"
+msgstr ""
+
+msgid "Logo Footer"
+msgstr ""
+
+msgid "Select an optional logo to show in the footer."
+msgstr ""
+
+msgid "Hide Title"
+msgstr ""
+
+msgid "Title Size"
+msgstr ""
+
+msgid "Default"
+msgstr ""
+
+msgid "H1"
+msgstr ""
+
+msgid "H2"
+msgstr ""
+
+msgid "H3"
+msgstr ""
+
+msgid "H4"
+msgstr ""
+
