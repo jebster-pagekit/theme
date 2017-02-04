@@ -52,6 +52,10 @@ return [
         }
     ],
 
+    'node' => [
+        'title_hide' => false
+    ],
+
     /**
      * Define theme configuration.
      * This is the theme's default configuration. During run-time, they will be merged with
