@@ -17,6 +17,7 @@ return [
      */
     'menus' => [
         'main' => 'Menu',
+        'offcanvas' => 'Off Canvas'
     ],
 
     /**
@@ -27,7 +28,8 @@ return [
     'positions' => [
         'above-full' => 'Above Full Width',
         'above' => 'Above content',
-        'sidebar' => 'Sidebar',
+        'right-sidebar' => 'Right Sidebar',
+        'left-sidebar' => 'Left Sidebar',
         'under' => 'Under content',
         'under-full' => 'Under Full Width'
     ],

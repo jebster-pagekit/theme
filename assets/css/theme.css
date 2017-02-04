@@ -1,4 +1,5 @@
-body{
+body {
+    overflow-y: scroll;
     font-family: lato, sans-serif;
     text-align: left;
     font-size: 14px;
@@ -57,6 +58,20 @@ body{
     top: 18px;
     font-size: 20px;
     padding: 10px;
+}
+
+ul.nav li ul{
+    height: auto !important;
+}
+
+ul.nav li ul li {
+    width: auto !important;
+}
+ul.nav li ul li a{
+    color: #777 !important;
+}
+ul.nav li ul li.active a{
+    color: #BA0000 !important;
 }
 
 .navbar-default .navbar-nav .active a{

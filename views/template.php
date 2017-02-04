@@ -55,19 +55,27 @@ $config = $module->config;
     <?php if($view->position()->exists('above')) : ?>
         <?= $view->position('above', 'row-position.php') ?>
     <?php endif; ?>
-
-    <div class="row ">
-        <?php if($view->position()->exists('sidebar')) : ?>
-            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-        <?php else : ?>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <?php $size = 12;
+        if($view->position()->exists('right-sidebar'))
+            $size -= 3;
+        if($view->position()->exists('left-sidebar'))
+            $size -= 3;
+    ?>
+    <div class="row">
+        <?php if($view->position()->exists('left-sidebar')) : ?>
+            <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+                <?= $view->position('left-sidebar') ?>
+            </div>
         <?php endif; ?>
-        <?= $view->render('content') ?>
+
+
+        <div class="col-xs-12 col-sm-12 col-md-<?=$size?> col-lg-<?=$size?>">
+            <?= $view->render('content') ?>
         </div>
 
-        <?php if($view->position()->exists('sidebar')) : ?>
+        <?php if($view->position()->exists('right-sidebar')) : ?>
             <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3 ">
-                <?= $view->position('sidebar') ?>
+                <?= $view->position('right-sidebar') ?>
             </div>
         <?php endif; ?>
     </div>
