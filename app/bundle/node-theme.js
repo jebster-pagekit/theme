@@ -96,7 +96,7 @@
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\n<div class=\"uk-form-horizontal\">\n    <div class=\"uk-form-row\">\n        <span class=\"uk-form-label\">{{ 'Title' | trans }}</span>\n        <div class=\"uk-form-controls uk-form-controls-text\">\n            <label><input type=\"checkbox\" v-model=\"node.theme.title_hide\"> {{ 'Hide Title' | trans }}</label>\n        </div>\n    </div>\n</div>\n\n";
+	module.exports = "\n\n<div class=\"uk-form-horizontal\">\n    <div class=\"uk-form-row\">\n        <span class=\"uk-form-label\">{{ 'Title' | trans }}</span>\n        <div class=\"uk-form-controls uk-form-controls-text\">\n            <label><input type=\"checkbox\" v-model=\"node.theme.title_hide\"> {{ 'Hide Title' | trans }}</label>\n        </div>\n    </div>\n    <div class=\"uk-form-row\">\n        <span class=\"uk-form-label\">{{ 'Width' | trans }}</span>\n        <div class=\"uk-form-controls uk-form-controls-text\">\n            <label><input type=\"checkbox\" v-model=\"node.theme.full_width\"> {{ 'Use full width' | trans }}</label>\n        </div>\n    </div>\n</div>\n\n";
 
 /***/ }
 /******/ ]);

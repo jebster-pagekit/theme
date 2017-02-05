@@ -50,40 +50,43 @@ $config = $module->config;
     <?= $view->position('above-full', 'full-position.php') ?>
 <?php endif; ?>
 
-<div class="container">
-
-    <?php if($view->position()->exists('above')) : ?>
-        <?= $view->position('above', 'row-position.php') ?>
-    <?php endif; ?>
-    <?php $size = 12;
-        if($view->position()->exists('right-sidebar'))
-            $size -= 3;
-        if($view->position()->exists('left-sidebar'))
-            $size -= 3;
-    ?>
-    <div class="row">
-        <?php if($view->position()->exists('left-sidebar')) : ?>
-            <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
-                <?= $view->position('left-sidebar') ?>
-            </div>
+<?php if($params->get('full_width')):
+    echo $view->render('content');
+else: ?>
+    <div class="container">
+        <?php if($view->position()->exists('above')) : ?>
+            <?= $view->position('above', 'row-position.php') ?>
         <?php endif; ?>
+        <?php $size = 12;
+            if($view->position()->exists('right-sidebar'))
+                $size -= 3;
+            if($view->position()->exists('left-sidebar'))
+                $size -= 3;
+        ?>
+        <div class="row">
+            <?php if($view->position()->exists('left-sidebar')) : ?>
+                <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+                    <?= $view->position('left-sidebar') ?>
+                </div>
+            <?php endif; ?>
 
 
-        <div class="col-xs-12 col-sm-12 col-md-<?=$size?> col-lg-<?=$size?>">
-            <?= $view->render('content') ?>
+            <div class="col-xs-12 col-sm-12 col-md-<?=$size?> col-lg-<?=$size?>">
+                <?= $view->render('content') ?>
+            </div>
+
+            <?php if($view->position()->exists('right-sidebar')) : ?>
+                <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3 ">
+                    <?= $view->position('right-sidebar') ?>
+                </div>
+            <?php endif; ?>
         </div>
 
-        <?php if($view->position()->exists('right-sidebar')) : ?>
-            <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3 ">
-                <?= $view->position('right-sidebar') ?>
-            </div>
+        <?php if($view->position()->exists('under')) : ?>
+            <?= $view->position('under', 'row-position.php') ?>
         <?php endif; ?>
     </div>
-
-    <?php if($view->position()->exists('under')) : ?>
-        <?= $view->position('under', 'row-position.php') ?>
-    <?php endif; ?>
-</div>
+<?php endif; ?>
 
 <?php if($view->position()->exists('under-full')) : ?>
     <?= $view->position('under-full', 'full-position.php') ?>

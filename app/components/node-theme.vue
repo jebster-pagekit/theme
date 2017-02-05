@@ -7,6 +7,12 @@
                 <label><input type="checkbox" v-model="node.theme.title_hide"> {{ 'Hide Title' | trans }}</label>
             </div>
         </div>
+        <div class="uk-form-row">
+            <span class="uk-form-label">{{ 'Width' | trans }}</span>
+            <div class="uk-form-controls uk-form-controls-text">
+                <label><input type="checkbox" v-model="node.theme.full_width"> {{ 'Use full width' | trans }}</label>
+            </div>
+        </div>
     </div>
 
 </template>

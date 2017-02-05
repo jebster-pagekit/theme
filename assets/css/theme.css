@@ -23,10 +23,19 @@ body {
     border-radius: 0;
     border-collapse: collapse;
 }
+@media (min-width: 1080px) {
 
-.container{
-    width: 1080px;
+    #navbar ul li{
+        width: 126px;
+    }
+    .container {
+        width: 1080px;
+    }
+    #navbar ul{
+        height: 76px;
+    }
 }
+
 .navbar-header{
     margin-top: 5px;
 }
@@ -40,18 +49,22 @@ body {
     margin: 3px;
 }
 
-#navbar ul{
-    height: 76px;
-}
-
 #navbar ul li{
-    width: 126px;
     margin: 2px;
     text-align: center;
     height:100%;
 }
 #navbar ul li a:hover{
     background-color: #f7f7f7;
+}
+
+.navbar-default .navbar-nav > li.dropdown:hover > a,
+.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
+    background-color: #f7f7f7;
+}
+li.dropdown:hover > .dropdown-menu {
+    display: block;
 }
 
 #navbar ul li a{
