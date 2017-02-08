@@ -20,28 +20,30 @@ $config = $module->config;
 <body>
 
 <header class="navbar-fixed-top">
-    <nav class="navbar navbar-default container">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="<?= $view->url()->get() ?>">
-                    <?php if ($logo = $params['logo']) : ?>
-                        <img class="logo" src="<?= $this->escape($logo) ?>" alt="">
-                    <?php else : ?>
-                        <?= $params['title'] ?>
-                    <?php endif ?>
-                </a>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="<?= $view->url()->get() ?>">
+                        <?php if ($logo = $params['logo']) : ?>
+                            <img class="logo" src="<?= $this->escape($logo) ?>" alt="">
+                        <?php else : ?>
+                            <?= $params['title'] ?>
+                        <?php endif ?>
+                    </a>
+                </div>
+                <?php if ($view->menu()->exists('main')) : ?>
+                    <?= $view->menu('main', 'menu-navbar.php') ?>
+                <?php endif ?>
             </div>
-            <?php if ($view->menu()->exists('main')) : ?>
-                <?= $view->menu('main', 'menu-navbar.php') ?>
-            <?php endif ?>
-        </div>
-    </nav>
+        </nav>
+    </div>
 </header>
 
 <div class="first"></div>

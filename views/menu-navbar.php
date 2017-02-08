@@ -5,9 +5,9 @@
                 <li class="dropdown <?= $node->get('active') ? 'active' : '' ?>">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <?= $node->title ?>
-                         <b class="caret"></b>
+<!--                         <b class="caret"></b>-->
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu"  style="border-top: none;">
                         <?php foreach($node->getChildren() as $child): ?>
                             <li class="<?= $child->get('active') ? 'active' : '' ?>">
                                 <a href="<?= $child->getUrl() ?>">
