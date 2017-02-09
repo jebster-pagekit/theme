@@ -1,3 +1,5 @@
+/* TODO: Fix footer when on multiple lines! */
+
 html{
     position:relative;
     min-height: 100%;
@@ -30,16 +32,40 @@ body {
     border-collapse: collapse;
 }
 @media (min-width: 1080px) {
-
-    #navbar ul li{
+    .navbar-nav li{
         width: 132px;
     }
     .container {
         width: 1080px;
     }
-    #navbar ul{
-        height: 75px;
+}
+@media (min-width: 768px) {
+    .navbar-nav {
+        height: 75px !important;
     }
+}
+@media (min-width: 992px) {
+    .navbar-nav ul li a:hover{
+        background-color: #f7f7f7;
+    }
+
+    .navbar-default .navbar-nav > li.dropdown:hover > a,
+    .navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+    .navbar-default .navbar-nav > li.dropdown:hover > a:focus {
+        background-color: #f7f7f7;
+    }
+    li.dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+}
+@media(max-width: 991px){
+    .navbar-nav li ul{
+        padding-top: 25px;
+    }
+    .navbar-nav li ul li a{
+        font-size: 14px;
+    }
+
 }
 
 .navbar-default {
@@ -51,26 +77,19 @@ body {
     margin: 3px;
 }
 
-#navbar ul li{
+.navbar-nav li{
     margin: 2px;
     text-align: center;
     height:100%;
     letter-spacing: 1px;
 }
-#navbar ul li a:hover{
-    background-color: #f7f7f7;
+
+.dropdown-menu{
+    min-width: 200px;
+    left: -30px;
 }
 
-.navbar-default .navbar-nav > li.dropdown:hover > a,
-.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
-.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
-    background-color: #f7f7f7;
-}
-li.dropdown:hover > .dropdown-menu {
-    display: block;
-}
-
-#navbar ul li a{
+.navbar-nav li a{
     top: 18px;
     font-size: 20px;
     padding: 10px;
@@ -86,17 +105,17 @@ li.dropdown:hover > .dropdown-menu {
     border-color: #B5B5B5;
 }
 
-ul.nav li ul{
+.navbar-nav li ul{
     height: auto !important;
 }
 
-ul.nav li ul li {
+.navbar-nav li ul li {
     width: auto !important;
 }
-ul.nav li ul li a{
+.navbar-nav li ul li a{
     color: #777 !important;
 }
-ul.nav li ul li.active a{
+.navbar-nav li ul li.active a{
     color: #BA0000 !important;
 }
 

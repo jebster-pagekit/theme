@@ -11,21 +11,22 @@ $config = $module->config;
     <meta charset="utf-8" />
     <?= $view->render('head') ?>
 
-    <?php $view->style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')?>
+    <?php $view->style('bootstrap', 'theme:assets/css/bootstrap.min.css')?>
     <?php $view->style('theme', 'theme:assets/css/theme.css', 'bootstrap') ?>
     <?php $view->style('lato', '//fonts.googleapis.com/css?family=Lato') ?>
 
-    <?php $view->script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', 'jquery') ?>
+
+    <?php $view->script('bootstrap', 'theme:assets/js/bootstrap.min.js', ['jquery']) ?>
 </head>
 <body>
 
 <header class="navbar-fixed-top">
     <div class="container">
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle</span>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-animations" aria-expanded="true">
+                        <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
