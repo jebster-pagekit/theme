@@ -10,7 +10,7 @@
                     <ul class="dropdown-menu dropdownhover-bottom" role="menu">
                         <?php foreach($node->getChildren() as $child): ?>
                             <li class="<?= $child->get('active') ? 'active' : '' ?>">
-                                <a href="<?= $child->getUrl() ?>">
+                                <a href="<?= $child->getUrl() ?>" <?= $child->type == 'link' ? 'target="_blank"' : '' ?>>
                                     <?= $child->title ?>
                                 </a>
                             </li>

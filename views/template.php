@@ -4,6 +4,17 @@ use Pagekit\Application as App;
 $module = App::module('theme');
 $config = $module->config;
 
+// TODO: Do this some other way :P
+$test = App::db()->createQueryBuilder()
+    ->select('*')
+    ->from('@system_node')
+    ->where('link = :link AND type = :type', ['link' => '@blog', 'type' => 'blog'])
+    ->execute()->fetchAll();
+
+$displayPositions = true;
+foreach(explode('/', $_SERVER["REQUEST_URI"]) as $p){
+    if($p == $test[0]['slug']) $displayPositions = false;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,7 +60,7 @@ $config = $module->config;
 
 <div class="first"></div>
 
-<?php if($view->position()->exists('above-full')) : ?>
+<?php if($view->position()->exists('above-full') && $displayPositions) : ?>
     <?= $view->position('above-full', 'full-position.php') ?>
 <?php endif; ?>
 
@@ -61,13 +72,13 @@ else: ?>
             <?= $view->position('above', 'row-position.php') ?>
         <?php endif; ?>
         <?php $size = 12;
-            if($view->position()->exists('right-sidebar'))
+            if($view->position()->exists('right-sidebar') && $displayPositions)
                 $size -= 3;
-            if($view->position()->exists('left-sidebar'))
+            if($view->position()->exists('left-sidebar') && $displayPositions)
                 $size -= 3;
         ?>
         <div class="row">
-            <?php if($view->position()->exists('left-sidebar')) : ?>
+            <?php if($view->position()->exists('left-sidebar') && $displayPositions) : ?>
                 <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
                     <?= $view->position('left-sidebar') ?>
                 </div>
@@ -78,7 +89,7 @@ else: ?>
                 <?= $view->render('content') ?>
             </div>
 
-            <?php if($view->position()->exists('right-sidebar')) : ?>
+            <?php if($view->position()->exists('right-sidebar') && $displayPositions) : ?>
                 <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3 ">
                     <?= $view->position('right-sidebar') ?>
                 </div>
@@ -91,7 +102,7 @@ else: ?>
     </div>
 <?php endif; ?>
 
-<?php if($view->position()->exists('under-full')) : ?>
+<?php if($view->position()->exists('under-full') && $displayPositions) : ?>
     <?= $view->position('under-full', 'full-position.php') ?>
 <?php endif; ?>
 

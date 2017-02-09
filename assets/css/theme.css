@@ -155,6 +155,17 @@ footer{
     bottom:0;
 }
 
+.btn-red:hover{
+    color: #fff;
+    background-color: #AC0000;
+    border-color: #830000;
+}
+.btn-red{
+    color: #fff;
+    background-color: #BA0000;
+    border-color: #830000;
+}
+
 /*
  * Theme CSS
  */

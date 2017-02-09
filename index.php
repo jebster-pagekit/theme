@@ -64,6 +64,8 @@ return [
      * settings the user has set in the backend. The default configuration can therefore
      * be overwritten.
      */
-    'config' => []
+    'config' => [
+        'blog_frontpage' => true
+    ]
 
 ];
