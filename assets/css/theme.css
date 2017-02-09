@@ -31,6 +31,11 @@ body {
     border-radius: 0;
     border-collapse: collapse;
 }
+
+.navbar-nav ul li a:hover{
+    background-color: #f7f7f7;
+}
+
 @media (min-width: 1080px) {
     .navbar-nav li{
         width: 132px;
@@ -44,16 +49,11 @@ body {
         height: 75px !important;
     }
 }
+.nav li a:hover {
+    background-color: #f7f7f7 !important;
+}
 @media (min-width: 992px) {
-    .navbar-nav ul li a:hover{
-        background-color: #f7f7f7;
-    }
 
-    .navbar-default .navbar-nav > li.dropdown:hover > a,
-    .navbar-default .navbar-nav > li.dropdown:hover > a:hover,
-    .navbar-default .navbar-nav > li.dropdown:hover > a:focus {
-        background-color: #f7f7f7;
-    }
     li.dropdown:hover > .dropdown-menu {
         display: block;
     }

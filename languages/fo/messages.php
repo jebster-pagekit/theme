@@ -4,7 +4,7 @@
   'H3' => 'H3',
   'H1' => 'H1',
   'H2' => 'H2',
-  'Use full width' => 'Nýtt alla breiddina',
+  'Use full width' => 'Nýt alla breiddina',
   'Width' => 'Breidd',
   'H4' => 'H4',
   'Title' => 'Heiti',
