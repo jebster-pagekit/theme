@@ -4,16 +4,19 @@ use Pagekit\Application as App;
 $module = App::module('theme');
 $config = $module->config;
 
-// TODO: Do this some other way :P
-$test = App::db()->createQueryBuilder()
-    ->select('*')
-    ->from('@system_node')
-    ->where('link = :link AND type = :type', ['link' => '@blog', 'type' => 'blog'])
-    ->execute()->fetchAll();
 
 $displayPositions = true;
-foreach(explode('/', $_SERVER["REQUEST_URI"]) as $p){
-    if($p == $test[0]['slug']) $displayPositions = false;
+if($config['blog_frontpage']) {
+// TODO: Do this some other way :P
+    $test = App::db()->createQueryBuilder()
+        ->select('*')
+        ->from('@system_node')
+        ->where('link = :link AND type = :type', ['link' => '@blog', 'type' => 'blog'])
+        ->execute()->fetchAll();
+
+    foreach (explode('/', $_SERVER["REQUEST_URI"]) as $p) {
+        if ($p == $test[0]['slug']) $displayPositions = false;
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -79,7 +82,7 @@ else: ?>
         ?>
         <div class="row">
             <?php if($view->position()->exists('left-sidebar') && $displayPositions) : ?>
-                <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     <?= $view->position('left-sidebar') ?>
                 </div>
             <?php endif; ?>
@@ -90,7 +93,7 @@ else: ?>
             </div>
 
             <?php if($view->position()->exists('right-sidebar') && $displayPositions) : ?>
-                <div class="col-xs-0 col-sm-0 col-md-3 col-lg-3 ">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 ">
                     <?= $view->position('right-sidebar') ?>
                 </div>
             <?php endif; ?>
@@ -107,16 +110,18 @@ else: ?>
 <?php endif; ?>
 
 <footer>
-    <div class="container">
-        <div style="text-align: center; height: 48px; line-height: 48px;">
-            <?= $config['footer_title'] ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <?= $config['footer_address'] ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <?= $config['footer_phone'] ?>
-            <img src="<?= $config['footer_logo'] ?>" style="float:right; height: 48px;">
-        </div>
+    <div class="container" style="text-align: center;">
+        <span>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $config['footer_title'] ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+        <span class="line">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $config['footer_address'] ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <span class="line">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $config['footer_phone'] ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+
+        <img src="<?= $config['footer_logo'] ?>" style="float:right; height: 48px;">
     </div>
 </footer>
 
 
+<?= $view->render('footer') ?>
 </body>
 </html>

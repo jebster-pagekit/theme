@@ -1,0 +1,31 @@
+.card{
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin: 25px 0;
+}
+.card-image{
+    float: left;
+    margin: 10px;
+}
+.card-image img{
+    width: 200px;
+}
+.card-title{
+    color: #BA0000;
+    font-weight: bold;
+}
+.card-content{
+    padding: 15px 5px;
+}
+
+article.blog img{
+    float: left;
+    margin: 15px;
+}
+
+article.blog .meta{
+    font-style: italic;
+    font-size: 12px;
+    color: #777;
+}

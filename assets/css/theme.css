@@ -20,6 +20,11 @@ body {
     margin: 0;
 }
 
+@media (max-width: 768px) {
+    body {
+        padding: 0 0 122px 0;
+    }
+}
 ::selection {
     color: #FFFFFF;
     background: #FF0000;
@@ -90,9 +95,11 @@ body {
 }
 
 .navbar-nav li a{
-    top: 18px;
+    /*top: 18px;*/
     font-size: 20px;
-    padding: 10px;
+    padding: 25px 10px 10px 10px;
+    /*border: 1px solid red;*/
+    height: 100%;
 }
 
 .panel-info > .panel-heading{
@@ -117,6 +124,16 @@ body {
 }
 .navbar-nav li ul li.active a{
     color: #BA0000 !important;
+}
+
+.navbar-nav li ul li ul{
+    margin: -50px 0 0 225px;
+}
+.navbar-nav li ul li ul{
+    min-width: 150px;
+}
+.navbar-nav li ul li ul li a{
+    font-size: 14px;
 }
 
 .navbar-default .navbar-nav .active a{
@@ -153,8 +170,28 @@ footer{
     position: absolute;
     width: 100%;
     bottom:0;
+    min-height: 48px;
+    line-height: 48px;
 }
 
+@media (max-width: 767px) {
+    footer .container{
+        line-height: 28px
+    }
+    footer .container span{
+        margin: 0;
+        padding: 0;
+        display: block;
+        text-align:center;
+    }
+    footer .container img{
+        margin-top: -24px;
+    }
+    footer .container span.line::first-letter{
+        /*border: 2px solid red;*/
+        visibility: hidden;
+    }
+}
 .btn-red:hover{
     color: #fff;
     background-color: #AC0000;
