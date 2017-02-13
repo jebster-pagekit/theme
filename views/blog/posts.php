@@ -3,7 +3,7 @@ $view->style('blog-post', 'theme:assets/css/blog.css');
 $view->script('posts', 'theme:assets/js/blogPosts.js', 'vue')
 ?>
 <br>
-<div id="posts">
+<div id="posts" v-cloak>
     <?php foreach ($posts as $post) : ?>
         <article class="card">
             <div class="card-image">

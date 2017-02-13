@@ -23,6 +23,7 @@ if($config['blog_frontpage']) {
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <?= $view->render('head') ?>
 
     <?php $view->style('bootstrap', 'theme:assets/css/bootstrap.min.css')?>
@@ -110,7 +111,7 @@ else: ?>
 <?php endif; ?>
 
 <footer>
-    <div class="container" style="text-align: center;">
+    <div class="container text-center">
         <span>              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $config['footer_title'] ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 
         <span class="line">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $config['footer_address'] ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
