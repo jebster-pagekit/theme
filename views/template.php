@@ -30,7 +30,6 @@ if($config['blog_frontpage']) {
     <?php $view->style('theme', 'theme:assets/css/theme.css', 'bootstrap') ?>
     <?php $view->style('lato', '//fonts.googleapis.com/css?family=Lato') ?>
 
-
     <?php $view->script('bootstrap', 'theme:assets/js/bootstrap.min.js', ['jquery']) ?>
 </head>
 <body>
