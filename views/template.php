@@ -23,14 +23,25 @@ if($config['blog_frontpage']) {
 <html>
 <head>
     <meta charset="utf-8" />
+    <?php if(isset($params['description']) && strlen(strip_tags($params['description'])) > 0): ?>
+        <meta name="description" content="<?= strip_tags($params['description']) ?>" />
+    <?php endif; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <?= $view->render('head') ?>
 
     <?php $view->style('bootstrap', 'theme:assets/css/bootstrap.min.css')?>
     <?php $view->style('theme', 'theme:assets/css/theme.css', 'bootstrap') ?>
+    <?php $view->style('header', 'theme:assets/css/header.css', 'bootstrap') ?>
     <?php $view->style('lato', '//fonts.googleapis.com/css?family=Lato') ?>
 
+    <?php $view->script('bshover','theme:assets/js/bshover.min.js') ?>
+
     <?php $view->script('bootstrap', 'theme:assets/js/bootstrap.min.js', ['jquery']) ?>
+    <script>
+        $.fn.bootstrapDropdownHover({
+            // see next for specifications
+        });
+    </script>
 </head>
 <body>
 
@@ -97,6 +108,7 @@ else: ?>
                     <?= $view->position('right-sidebar') ?>
                 </div>
             <?php endif; ?>
+
         </div>
 
         <?php if($view->position()->exists('under')) : ?>

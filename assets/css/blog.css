@@ -1,31 +1,77 @@
-.card{
+/* Copy and paste from bootstrap v4 */
+
+@media (min-width: 576px){
+    .card-deck {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+    .card-deck .card:not(:last-child) {
+        margin-right: 15px;
+    }
+    .card-deck .card {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 0 0%;
+        -ms-flex: 1 0 0%;
+        flex: 1 0 0%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: .25rem;
-    margin: 25px 0;
 }
-.card-image{
-    float: left;
-    margin: 10px;
+
+.card-img-top {
+    border-top-right-radius: calc(.25rem - 1px);
+    border-top-left-radius: calc(.25rem - 1px);
 }
-.card-image img{
-    width: 200px;
+
+.card-block {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
 }
-.card-title{
+.card-title {
+    margin-bottom: .75rem;
     color: #BA0000;
     font-weight: bold;
 }
-.card-content{
-    padding: 15px 5px;
+.card-text:last-child {
+    margin-bottom: 0;
 }
 
-article.blog img{
-    float: left;
-    margin: 15px;
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: #f7f7f9;
+    border-top: 1px solid rgba(0,0,0,.125);
 }
-
-article.blog .meta{
-    font-style: italic;
-    font-size: 12px;
-    color: #777;
+.card-footer:last-child {
+    border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
 }

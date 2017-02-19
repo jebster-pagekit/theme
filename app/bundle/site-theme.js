@@ -109,7 +109,7 @@
 /* 4 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\n<h1>Hello</h1>\n\n";
+	module.exports = "\n\n<div class=\"uk-margin uk-flex uk-flex-space-between uk-flex-wrap\" data-uk-margin>\n    <div data-uk-margin>\n        <h2 class=\"uk-margin-remove\">{{ 'Meta Settings' | trans }}</h2>\n    </div>\n\n    <div data-uk-margin>\n        <button class=\"uk-button uk-button-primary\" @click.prevent=\"save\">{{ 'Save' | trans }}</button>\n    </div>\n</div>\n\n<div class=\"uk-form-row\">\n    <label class=\"uk-form-label\">{{ 'Description' | trans }}</label>\n    <div class=\"uk-form-controls uk-form-controls-text\">\n        <label class=\"uk-form-controls-condensed\" for=\"input-description\">\n            <textarea type=\"text\" id=\"input-description\" type=\"text\" class=\"uk-form-width-large\" rows=\"5\" v-model=\"config.description\"></textarea>\n        </label>\n    </div>\n</div>\n\n";
 
 /***/ }
 /******/ ]);

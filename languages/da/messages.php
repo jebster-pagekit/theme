@@ -1,12 +1,16 @@
 <?php return array (
   'Title Size' => '',
+  'Read more' => '',
   'Default' => '',
   'H3' => '',
   'H1' => '',
   'H2' => '',
   'Use full width' => '',
   'Width' => '',
+  'Meta Settings' => '',
   'H4' => '',
+  'Description' => '',
+  'Save' => '',
   'Title' => '',
   'Hide Title' => '',
 );

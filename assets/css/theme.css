@@ -24,31 +24,8 @@ body {
 }
 
 @media (min-width: 1080px) {
-    .navbar-nav li{
-        width: 132px;
-    }
     .container {
         width: 1080px;
-    }
-}
-@media (min-width: 992px) {
-
-    li.dropdown:hover > .dropdown-menu {
-        display: block;
-    }
-}
-@media(max-width: 991px){
-    .navbar-nav li ul{
-        padding-top: 25px;
-    }
-    .navbar-nav li ul li a{
-        font-size: 14px;
-    }
-
-}
-@media (min-width: 768px) {
-    .navbar-nav {
-        height: 75px !important;
     }
 }
 
@@ -73,48 +50,12 @@ body {
         padding: 0 0 138px 0;
     }
 }
+
 .container-fluid{
     border: none;
     background-color: #fff;
     border-radius: 0;
     border-collapse: collapse;
-}
-
-.navbar-nav ul li a:hover{
-    background-color: #f7f7f7;
-}
-
-.nav li a:hover {
-    background-color: #f7f7f7 !important;
-}
-
-.navbar-default {
-    background-color: #fff;
-    border-color: #fff;
-}
-.navbar-brand{
-    padding: 0;
-    margin: 3px;
-}
-
-.navbar-nav li{
-    margin: 2px;
-    text-align: center;
-    height:100%;
-    letter-spacing: 1px;
-}
-
-.dropdown-menu{
-    min-width: 200px;
-    left: -30px;
-}
-
-.navbar-nav li a{
-    /*top: 18px;*/
-    font-size: 20px;
-    padding: 25px 10px 10px 10px;
-    /*border: 1px solid red;*/
-    height: 100%;
 }
 
 .panel-info > .panel-heading{
@@ -127,38 +68,6 @@ body {
     border-color: #B5B5B5;
 }
 
-.navbar-nav li ul{
-    height: auto !important;
-}
-
-.navbar-nav li ul li {
-    width: auto !important;
-}
-.navbar-nav li ul li a{
-    color: #777 !important;
-}
-ul.dropdown-menu > li.active > a{
-    color: #BA0000 !important;
-}
-
-.navbar-nav li ul li ul{
-    margin: -50px 0 0 225px;
-}
-.navbar-nav li ul li ul{
-    min-width: 150px;
-}
-.navbar-nav li ul li ul li a{
-    font-size: 14px;
-}
-
-.navbar-default .navbar-nav .active a{
-    background-color: #fff;
-    color: #BA0000;
-}
-
-.logo{
-    height: 72px;
-}
 
 
 article > h1{
@@ -167,18 +76,7 @@ article > h1{
     border-bottom: 1px solid #eee;
     padding-bottom: 9px;
 }
-header{
-    width: 100%;
-    height: 78px;
-    padding: 0;
-    margin-bottom: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 11px rgba(0,0,0,0.5);
-}
 
-header nav{
-    margin-bottom: 0 !important;
-}
 
 .first{
     margin: 78px 0 0 0;
@@ -201,116 +99,15 @@ footer{
     background-color: #AC0000;
     border-color: #830000;
 }
+
 .btn-red{
     color: #fff;
     background-color: #BA0000;
     border-color: #830000;
 }
 
-/*
- * Theme CSS
- */
-
-/*
- * Nav
- */
-
-.uk-nav {}
-
-.uk-active {}
-
-.uk-parent {}
-
-.uk-nav-sub {}
-
-/*
- * Page and Posts
- */
-
-.uk-article {}
-
-.uk-article-title {}
-
-.uk-article-meta{}
-
-/*
- * Subnav
- */
-
-.uk-subnav {}
-
-/*
- * Pagination
- */
-
-.uk-pagination {}
-
-.uk-pagination-previous {}
-
-.uk-pagination-next {}
-
-/*
- * Comment
- */
-
-.uk-comment-list {}
-
-.uk-comment {}
-
-.uk-comment-header {}
-
-.uk-comment-avatar {}
-
-.uk-comment-title {}
-
-.uk-comment-meta {}
-
-.uk-comment-meta {}
-
-.uk-comment-body {}
-
-/*
- * Form
- */
-
-.uk-form {}
-
-.uk-form-stacked {}
-
-.uk-form-row {}
-
-.uk-form-label {}
-
-.uk-form-controls {}
-
-.uk-form-width-medium {}
-
-.uk-form-width-large {}
-
-.uk-form-help-block
-
-/*
- * Button
- */
-
-.uk-button {}
-
-.uk-button-primary {}
-
-/*
- * Utility
- */
-
-.uk-width-1-1 {}
-
-.uk-margin {}
-
-.uk-margin-large {}
-
-.uk-h4 {}
-
-.uk-text-danger {}
-
-.uk-link-muted {}
-
-.uk-display-block{}
+@media (min-width: 1080px) {
+    .pull-right-only {
+        float: right;
+    }
+}
