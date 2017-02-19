@@ -10,12 +10,12 @@
                     <ul class="dropdown-menu dropdownhover-bottom" role="menu">
                         <?php foreach($node->getChildren() as $child):
                             if(sizeof($child->getChildren()) > 0): ?>
-                                <li class="dropdown <?= $child->get('active') ? 'active' : '' ?>">
+                                <li class="dropdown-submenu <?= $child->get('active') ? 'active' : '' ?>">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                         <?= $child->title ?>
                                         <b class="caret hidden-md hidden-lg hidden-sm"></b>
                                     </a>
-                                    <ul class="dropdown-menu dropdownhover-bottom" role="menu">
+                                    <ul class="dropdown-menu" role="menu">
                                         <?php foreach($child->getChildren() as $baby): ?>
                                             <li class="<?= $baby->get('active') ? 'active' : '' ?>">
                                                 <a href="<?= $baby->getUrl() ?>" <?= $baby->type == 'link' ? 'target="_blank"' : '' ?>>
