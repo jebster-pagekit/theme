@@ -34,9 +34,9 @@ if($config['blog_frontpage']) {
     <?php $view->style('header', 'theme:assets/css/header.css', 'bootstrap') ?>
     <?php $view->style('lato', '//fonts.googleapis.com/css?family=Lato') ?>
 
-    <?php $view->script('bshover','theme:assets/js/bshover.min.js') ?>
+    <?php $view->script('bshover','theme:assets/js/bshover.min.js', 'jquery') ?>
 
-    <?php $view->script('bootstrap', 'theme:assets/js/bootstrap.min.js', ['jquery']) ?>
+    <?php $view->script('bootstrap', 'theme:assets/js/bootstrap.min.js', ['bshover']) ?>
     <script>
         $.fn.bootstrapDropdownHover({
             // see next for specifications
